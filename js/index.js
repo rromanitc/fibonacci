@@ -8,7 +8,7 @@ function mass_fib_output(n){
     return u;
 }
 
-document.write("This is yours Fibonachi numbers = " + mass_fib_output(incoming) + '<br>');
+document.write("This is yours Fibonacci numbers = " + mass_fib_output(incoming) + '<br>');
 
 function mass_fib(n){
     let u = [0, 1];
@@ -18,13 +18,13 @@ function mass_fib(n){
     return u[n];
 }
 
-document.write("Fibonachi in massiv = " + mass_fib(incoming) + '<br>');
+document.write("Fibonacci in massiv = " + mass_fib(incoming) + '<br>');
 
 function rec_fib(n) {
   return n <= 1 ? n : rec_fib(n - 1) + rec_fib(n - 2);
 }
 
-document.write("Fibonachi recursion = " + rec_fib(incoming) + '<br>'); // 2
+document.write("Fibonacci recursion = " + rec_fib(incoming) + '<br>'); // 2
 
 function for_fib(n){
     let a = 1, b = 1, c;
@@ -37,7 +37,7 @@ function for_fib(n){
     return b;
 }
 
-document.write("Fibonachi in for loop = " + for_fib(incoming) + '<br>');
+document.write("Fibonacci in for loop = " + for_fib(incoming) + '<br>');
 
 function fibIterative(n) {
   let [a, b] = [1, 0];
@@ -47,12 +47,12 @@ function fibIterative(n) {
   return b;
 }
 
-document.write("Fibonachi Iterative = " + fibIterative(incoming) + '<br>');
+document.write("Fibonacci Iterative = " + fibIterative(incoming) + '<br>');
 
 
 const fibLine = (n, a = 1, b = 0) => (n === 0) ? b : fibLine(n - 1, a + b, a);
 
-document.write("Fibonachi in Line = " + fibLine(incoming) + '<br>');
+document.write("Fibonacci in Line = " + fibLine(incoming) + '<br>');
 
 function fib_mass(n) {
     let cache = {};
@@ -73,7 +73,7 @@ function fib_mass(n) {
     return value;
 }
 
-document.write("Fibonachi cache = " + fib_mass(incoming) + '<br>');
+document.write("Fibonacci cache = " + fib_mass(incoming) + '<br>');
 
 function fibonacci(n) {
 
@@ -86,5 +86,5 @@ function fibonacci(n) {
     return sequence[numberZeroBased];
 };
 
-document.write("Fibonachi with limites massiv = " + fibonacci(incoming) + '<br>');
+document.write("Fibonacci with limites massiv = " + fibonacci(incoming) + '<br>');
 
