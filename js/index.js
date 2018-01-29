@@ -24,7 +24,7 @@ function rec_fib(n) {
   return n <= 1 ? n : rec_fib(n - 1) + rec_fib(n - 2);
 }
 
-document.write("Fibonachi recurthion = " + rec_fib(incoming) + '<br>'); // 2
+document.write("Fibonachi recursion = " + rec_fib(incoming) + '<br>'); // 2
 
 function for_fib(n){
     let a = 1, b = 1, c;
