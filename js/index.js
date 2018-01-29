@@ -1,4 +1,13 @@
-let incoming = parseInt(prompt('Enter n'));
+let correctInput = false;
+let incoming;
+do {
+    incoming = parseInt(prompt('Please enter n number of Fibonacci'), 10);
+    if (isNaN(incoming) || incoming <= 0) {
+        alert('Потрібно ввести натуральне число :)');
+        continue;
+    }
+    correctInput = true;
+} while (!correctInput);
 
 function mass_fib_output(n){
     let u = [0, 1];
@@ -74,17 +83,3 @@ function fib_mass(n) {
 }
 
 document.write("Fibonacci cache = " + fib_mass(incoming) + '<br>');
-
-function fibonacci(n) {
-
-    var sequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-    var numberZeroBased = n - 1;
-
-    if (numberZeroBased > sequence.length)
-        throw new Error('The number you provided is outside of the range');
-
-    return sequence[numberZeroBased];
-};
-
-document.write("Fibonacci with limites massiv = " + fibonacci(incoming) + '<br>');
-
