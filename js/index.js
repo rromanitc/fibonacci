@@ -1,17 +1,30 @@
 let incoming = parseInt(prompt('Enter n'));
 
+function mass_fib_output(n){
+    let u = [0, 1];
+    for (i=2; i<=n; i++){
+        u.push(u[i-1]+u[i-2]);
+    }
+    return u;
+}
+
+document.write("This is yours Fibonachi numbers = " + mass_fib_output(incoming) + '<br>');
+
+function mass_fib(n){
+    let u = [0, 1];
+    for (i=2; i<=n; i++){
+        u.push(u[i-1]+u[i-2]);
+    }
+    return u[n];
+}
+
+document.write("Fibonachi in massiv = " + mass_fib(incoming) + '<br>');
+
 function rec_fib(n) {
   return n <= 1 ? n : rec_fib(n - 1) + rec_fib(n - 2);
 }
 
 document.write("Fibonachi recurthion = " + rec_fib(incoming) + '<br>'); // 2
-// function fib(n) {
-//   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
-// }
-
-// document.write( fib(5) ); // 2
-// document.write('<br>');
-// document.write( fib(11) ); // 13
 
 function for_fib(n){
     let a = 1, b = 1, c;
@@ -24,24 +37,7 @@ function for_fib(n){
     return b;
 }
 
-document.write("Fibonachi for = " + for_fib(incoming) + '<br>');
-
-
-
-function mass_fib(n){
-    let u = [0, 1];
-    let r = [];
-    for (i=2; i<=n; i++){
-        u.push(u[i-1]+u[i-2]);
-        console.log(r);
-    }
-
-    return u[n];
-
-}
-
-document.write("Fibonachi mass = " + mass_fib(incoming) + '<br>');
-
+document.write("Fibonachi in for loop = " + for_fib(incoming) + '<br>');
 
 function fibIterative(n) {
   let [a, b] = [1, 0];
@@ -56,10 +52,7 @@ document.write("Fibonachi Iterative = " + fibIterative(incoming) + '<br>');
 
 const fibLine = (n, a = 1, b = 0) => (n === 0) ? b : fibLine(n - 1, a + b, a);
 
-document.write("Fibonachi Line = " + fibLine(incoming) + '<br>');
-
-
-
+document.write("Fibonachi in Line = " + fibLine(incoming) + '<br>');
 
 function fib_mass(n) {
     let cache = {};
@@ -80,12 +73,12 @@ function fib_mass(n) {
     return value;
 }
 
-document.write("Fibonachi mass = " + fib_mass(incoming) + '<br>');
+document.write("Fibonachi cache = " + fib_mass(incoming) + '<br>');
 
-function fibonacci(number) {
+function fibonacci(n) {
 
     var sequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-    var numberZeroBased = number - 1;
+    var numberZeroBased = n - 1;
 
     if (numberZeroBased > sequence.length)
         throw new Error('The number you provided is outside of the range');
@@ -93,18 +86,5 @@ function fibonacci(number) {
     return sequence[numberZeroBased];
 };
 
-document.write("Fibonachi mass = " + fibonacci(incoming) + '<br>');
-
-
-function calculateFibonacciNumbers(max) {  
-  var fib = [0, 1]
-  for (var i = 2; i < max; i++ ) {
-    fib.push( fib[i - 1] + fib[i - 2] )
-  }
-  var m = fib[max.value];
-  return m;
-}
-
-
-document.write("Fibonachi calc = " + calculateFibonacciNumbers(incoming) + '<br>');
+document.write("Fibonachi with limites massiv = " + fibonacci(incoming) + '<br>');
 
