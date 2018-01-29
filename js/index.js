@@ -3,7 +3,7 @@ let incoming;
 do {
     incoming = parseInt(prompt('Please enter n number of Fibonacci'), 10);
     if (isNaN(incoming) || incoming <= 0) {
-        alert('Потрібно ввести натуральне число :)');
+        alert('Please enter a number');
         continue;
     }
     correctInput = true;
